@@ -23,3 +23,10 @@ NOTE : jitne baar bhi apna code version save kr rhe hai then apna data ko bhi sa
 14. Then git add-commit-push (we are saving version 2 of our data at this point)
 15. Check dvc/git status, everything should be upto date
 16. Now repeat step 12-14 for version 3 of data
+
+
+Now let's say we want to rollback to our first version of data
+so we will do:
+1. git log --oneline (to get sha id for our first version of data commit)
+2. git checkout <sha id> - git checkout master
+3. dvc pull
